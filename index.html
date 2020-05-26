@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<title>Jamie Anderson Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <!--<img src="/w3images/avatar_smoke.jpg" style="width:100%"> -->
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>TECHNICAL</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>PROFESSIONAL</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">TECHNICAL</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">PROFESIONAL</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Jamie Anderson</h1>
+    <p>This portfolio contains all my personal documentation from the development of Skin, the intent of this document is to convey that I understand 
+	crucial aspects of software development.
+			</p>
+  </header> 
+  <!-- Technical Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="photos">
+    <h2 class="w3-text-light-grey">TECHNICAL</h2>
+    <hr style="width:200px" class="w3-opacity">
+<b>Water Shader Graph</b>
+<p>
+The first addition I added to Skin was a Water Shader Graph. This allows for the implementation of water within the Unity engine. 
+<br></br>
+<a href="https://www.youtube.com/watch?v=uuzB93F39P8">Water Shader Graph Tutorial</a>
+<br></br>
+Using the referenced video above, I created a water shader graph for Skin which requires: 
+<ol>
+<li>Lightweight Render Pipeline</li>
+<li>Waterbump Texture Map</li>
+<li>Shader Graph</li>
+<li>Water Shader Graph Texture (applied to plane)</li>
+</ol>
+<br></br>
+NOTE: Simplest way to acquire a Waterbump Texture Map is by acquiring one off the internet, a simple google search will bring up multiple choices. 
+<br></br>
+Once all components are created place a plane asset into the enviroment and apply the shader graph to it, Once applied the configuration 
+options will become available to adjust the water textures behaviours like colors and the speed at which the texture pans across the plane, this emulates the 
+behaviour of a current or flowing water.
+<br></br>
+<img src="resources/img/watermap2.png" alt="ERROR NO IMG" height="300" width="550">
+<br></br>
+<img src="resources/img/live.png" alt="ERROR NO IMG" height="300" width="550">
+<br></br>
+Issues: Due to Skin using the HDRP (High Definition Render Pipeline) there is a rendering issue with the water as it is effected by some form of culling based on player location.
+This does not occur when the LWRP (Light Weight Render Pipeline) however as concluded by my own testing and consultation by previous Skin developer, Jordan Dargaville.
+<br></br>
+</p>
+<b>AI Path Following</b>
+<p>
+One of the core game mechanics is the ability to posses animals. One of the animals you can posses is a bird, and will be 
+able to recon the surrounding area a bird is patrolling via the perspective of the bird. 
+<br></br>
+This was implemented was via a path following script that was attached to the bird entity. This script also renders waypoints that can be place and arranged manually 
+to create a fixed repeating flight path for the bird to follow, this will allow visibility of the surrounding area.
+<br></br>
+<img src="resources/img/crow.png" alt="ERROR NO IMG" height="400" width="300">
+</p>
+<br>
+<!-- Reflection -->	
+<b>Reflection</b>
+<br></br>	
+<b>Personal Statement</b>
+<p>
+</p>
+
+
+  <!-- End Technical Section -->
+  </div>
+
+    <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">PROFESSIONAL</h2>
+    <hr style="width:200px" class="w3-opacity">
+	
+	<p>
+<br></br>
+</p>
+<b>Reflection</b>
+	<br></br>
+<b>Personal Statement</b>
+<p>
+</p>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+   
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>

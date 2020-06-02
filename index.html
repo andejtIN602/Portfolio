@@ -59,6 +59,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-padding-64 w3-content w3-text-grey" id="photos">
     <h2 class="w3-text-light-grey">TECHNICAL</h2>
     <hr style="width:200px" class="w3-opacity">
+<b><u>SKIN</u></b>	
+<br></br>
 <b>Water Shader Graph</b>
 <p>
 The first addition I added to Skin was a Water Shader Graph. This allows for the implementation of water within the Unity engine. 
@@ -79,6 +81,8 @@ Once all components are created place a plane asset into the enviroment and appl
 options will become available to adjust the water textures behaviours like colors and the speed at which the texture pans across the plane, this emulates the 
 behaviour of a current or flowing water.
 <br></br>
+<img src="resources/img/watermap3.png" alt="ERROR NO IMG" height="300" width="550">
+<br></br>
 <img src="resources/img/watermap2.png" alt="ERROR NO IMG" height="300" width="550">
 <br></br>
 <img src="resources/img/live.png" alt="ERROR NO IMG" height="300" width="550">
@@ -92,16 +96,73 @@ This does not occur when the LWRP (Light Weight Render Pipeline) however as conc
 One of the core game mechanics is the ability to posses animals. One of the animals you can posses is a bird, and will be 
 able to recon the surrounding area a bird is patrolling via the perspective of the bird. 
 <br></br>
-<img src="resources/img/bird.png" alt="ERROR NO IMG" height="400" width="300">
+<img src="resources/img/bird.png" alt="ERROR NO IMG" height="300" width="400">
 <br></br>
 This was implemented was via a path following script that was attached to the bird entity. This script also renders waypoints that can be place and arranged manually 
 to create a fixed repeating flight path for the bird to follow, this will allow visibility of the surrounding area.
 <br></br>
 <img src="resources/img/crow.png" alt="ERROR NO IMG" height="400" width="300">
 </p>
-<br>
+<b>Render Layers Unity</b>
+<p>
+Skin uses a different set of character models and animations based on the perspective of the player. For example, 
+while the player perspective shows the characters arms and what the player has equipped, they cannot see the physcial character model that effects the players hitbox, collision
+and so on. 
+<br></br>
+The problem with this, is that without the use of correct layering for entities in the running enviroment will cause shadows and entities and animations to be viewable to other players
+or cameras within the enviroment. To correct this, I used the Layer tool and created a new layer to associate player viewable only assets. 
+</p>
+<h2><u><b>PROJECT DARK</b></u></h2>
+<br></br>
+<p>
+Project Dark is my personal project that I am developing within Unity as a side project to learn more in-depth game developement skills. Over the semester alongside Skin I have 
+slowly been adding features and mechanics to my game for testing.  
+</p>
+<b>Controller</b>
+<p>
+The core focus of my game is the camera perspective I use, this has changed multiple times as I have experimented with fixed camera angles and first-person. Ultimately I decided
+on a first-person perspective due to the effects I can add to the scene (Camera sway, fixed perspectives, etc.). 
+</p>
+<b>Animation</b>
+<p> 
+Adding animations is simplistic with the animator inspector as it enables states and transitions to be mapped for specific animations to play when prompted.
+For example, with my character there is a value recorded for the x and z-axis movement, isDead and isWalking checks.
+<br></br>
+If the player is walking the isWalking statement is set to true,
+this triggers a transitition to play the walking animation. Based on the value of the x and z-axis the direction of the animation will determined and result in directional animation.
+<br></br>
+<img src="resources/img/fps.png" alt="ERROR NO IMG" height="300" width="250">
+<img src="resources/img/fps2.png" alt="ERROR NO IMG" height="300" width="250">
+<br></br>
+<img src="resources/img/fps3.png" alt="ERROR NO IMG" height="300" width="500">
+<br></br>
+<a href="https://www.mixamo.com/">Animation Source</a>
+<br></br>
+
+
+</p>
+<b>Pro Builder / Pro Grid</b>
+<p>
+Pro Builder and Grid are Unity Tool's that completely overhauls Unitys scene envioment with features that allow for much easier placement of objects with snapping and 
+adjustment. These tools are technically two seperate entities but when both installed work together as Pro Grid adds a grid placement for everything within the scene with adjustable
+snapping, while Pro Builder allows for the addition and manipulation of new or existing objects in the scene.
+<br></br>
+<img src="resources/img/builder.png" alt="ERROR NO IMG" height="400" width="700">
+<br></br>
+To use Pro Grid within the scene enviroment you will notice additional elements to the scene interface to the left. You can set the snapping increment and 
+the rendered grid (x, y or z-axis).
+<br></br>
+Once setup is complete and Pro Grid and Pro Builder are both installed, You can use the Pro Builder menu to create new shapes and related aspects such as the material and UV settings.
+These tools make for fast construction of scenes for testing and implementation. 
+<br></br>
+<img src="resources/img/builder2.png" alt="ERROR NO IMG" height="300" width="250">
+<br></br>
+Adding new shapes is done by selecting new shape or opening the shape tool menu and then selecting a shape style and the dimensions, once finalised click the "Build" button and the 
+shape will be added to the envioment and added to the scene heirachy. 
+</p>
 <!-- Reflection -->	
-<b>Reflection</b>
+<br></br>
+<u><b>Reflection</b></u>
 <br></br>	
 <b>Personal Statement</b>
 <p>
@@ -115,9 +176,21 @@ to create a fixed repeating flight path for the bird to follow, this will allow 
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">PROFESSIONAL</h2>
     <hr style="width:200px" class="w3-opacity">
-	
 	<p>
-<br></br>
+	<u><b>Communication</b></u>
+	<br></br>
+	Initially we had scrums in which we would meet and have a progress update with the team and plan further additions. Due to COVID-19, we could not meet for scrums or 
+	intertaction in general. 
+	<br></br>
+	After entering lock down, MS Teams was used as the main form of communication. This worked as I tended to work on addtions and features indepedently from the team
+	as I was the only project 2 student for game development, thus more was expected of me due to my previous experience and learning from the previous semester I spent 
+	in game development.
+	<br></br>
+	My main line of communication was with Adon as I would mainly consult Adon for approval of what next for me to research and implement into Skin or to update on current
+	developments.
+	<br></br>
+	<img src="resources/img/team2.png" alt="ERROR NO IMG" height="450" width="350">
+	
 </p>
 <b>Reflection</b>
 	<br></br>

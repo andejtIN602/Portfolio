@@ -59,7 +59,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-padding-64 w3-content w3-text-grey" id="photos">
     <h2 class="w3-text-light-grey">TECHNICAL</h2>
     <hr style="width:200px" class="w3-opacity">
-<b><u>SKIN</u></b>	
+<h2><b><u>SKIN</u></b></h2>	
 <br></br>
 <b>Water Shader Graph</b>
 <p>
@@ -81,14 +81,14 @@ Once all components are created place a plane asset into the enviroment and appl
 options will become available to adjust the water textures behaviours like colors and the speed at which the texture pans across the plane, this emulates the 
 behaviour of a current or flowing water.
 <br></br>
+Issues: Due to Skin using HDRP (High Definition Render Pipeline) there is a rendering issue with the water as it is effected by some form of culling based on player location.
+This does not occur when using LWRP (Light Weight Render Pipeline) however as concluded by my own testing and consultation by previous Skin developer, Jordan Dargaville.
+<br></br>
 <img src="resources/img/watermap3.png" alt="ERROR NO IMG" height="300" width="550">
 <br></br>
 <img src="resources/img/watermap2.png" alt="ERROR NO IMG" height="300" width="550">
 <br></br>
 <img src="resources/img/live.png" alt="ERROR NO IMG" height="300" width="550">
-<br></br>
-Issues: Due to Skin using HDRP (High Definition Render Pipeline) there is a rendering issue with the water as it is effected by some form of culling based on player location.
-This does not occur when using LWRP (Light Weight Render Pipeline) however as concluded by my own testing and consultation by previous Skin developer, Jordan Dargaville.
 <br></br>
 <video width="720" height="480" controls>
   <source src="resources/img/water.mp4" type="video/mp4">
@@ -117,10 +117,16 @@ while the player perspective shows the characters arms and what the player has e
 and so on. 
 <br></br>
 The problem with this, is that without the use of correct layering for entities in the running enviroment will cause shadows and entities and animations to be viewable to other players
-or cameras within the enviroment. To correct this, I used the Layer tool and created a new layer to associate player viewable only assets. 
-</p>
-<h2><u><b>PROJECT DARK</b></u></h2>
+or cameras within the enviroment. To correct this, I used the Layer tool and created a new layer to associate player viewable only assets, I have listed the process below.
 <br></br>
+<ol>
+  <li>Create a new layer, click layer "add new layer"</li>
+  <li>Select FPS arms and put them into the layer created "example"</li>
+  <li>Remove the "example" layer from the cull list for every camera aside from the player camera</li>
+</ol>
+</p>
+<br></br>
+<h2><u><b>PROJECT DARK</b></u></h2>
 <p>
 Project Dark is my personal project that I am developing within Unity as a side project to learn more in-depth game developement skills. Over the semester alongside Skin I have 
 slowly been adding features and mechanics to my game for testing.  
@@ -132,26 +138,23 @@ on a first-person perspective due to the effects I can add to the scene (Camera 
 </p>
 <b>Animation</b>
 <p> 
+<a href="https://www.mixamo.com/">Animation Source</a>
+<br></br>
 Adding animations is simplistic with the animator inspector as it enables states and transitions to be mapped for specific animations to play when prompted.
 For example, with my character there is a value recorded for the x and z-axis movement, isDead and isWalking checks.
-<br></br>
-<img src="resources/img/fps3.png" alt="ERROR NO IMG" height="300" width="500">
 <br></br>
 If the player is walking the isWalking statement is set to true,
 this triggers a transitition to play the walking animation. Based on the value of the x and z-axis the direction of the animation will determined and result in directional animation.
 <br></br>
+<img src="resources/img/fps3.png" alt="ERROR NO IMG" height="300" width="500">
+<br></br>
 <img src="resources/img/fps.png" alt="ERROR NO IMG" height="300" width="250">
 <img src="resources/img/fps2.png" alt="ERROR NO IMG" height="300" width="250">
-<br></br>
-
-<br></br>
-<a href="https://www.mixamo.com/">Animation Source</a>
 <br></br>
 <video width="720" height="480" controls>
   <source src="resources/img/anim.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-
 </p>
 <b>Pro Builder / Pro Grid</b>
 <p>
@@ -172,18 +175,8 @@ These tools make for fast construction of scenes for testing and implementation.
 Adding new shapes is done by selecting new shape or opening the shape tool menu and then selecting a shape style and the dimensions, once finalised click the "Build" button and the 
 shape will be added to the envioment and added to the scene heirachy. 
 </p>
-<!-- Reflection -->	
-<br></br>
-<u><b>Reflection</b></u>
-<br></br>	
-
-<p>
-</p>
-
-
   <!-- End Technical Section -->
   </div>
-
     <!-- Contact Section -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">PROFESSIONAL</h2>
@@ -205,22 +198,18 @@ shape will be added to the envioment and added to the scene heirachy.
 	
 </p>
 <b>Reflection</b>
-	<br></br>
-	Due to the lockdown, we weren't able to communcicate by holding meetings or debriefs. Teams was the only form of 
-
+	
+	
 <p>
+Due to the lockdown, we weren't able to communcicate by holding meetings or debriefs. Teams was the only form of 
 </p>
   <!-- End Contact Section -->
   </div>
-  
     <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-   
   <!-- End footer -->
   </footer>
-
 <!-- END PAGE CONTENT -->
 </div>
-
 </body>
 </html>

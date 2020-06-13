@@ -135,6 +135,22 @@ slowly been adding features and mechanics to my game for testing.
 <p>
 The core focus of my game is the camera perspective I use, this has changed multiple times as I have experimented with fixed camera angles and first-person. Ultimately I decided
 on a first-person perspective due to the effects I can add to the scene (Camera sway, fixed perspectives, etc.). 
+<br></br>
+Currently I have three scripts that effect the player controls and mechanics.  
+<ul>
+  <li>Player Controller</li>
+  <li>Movement</li>
+  <li>Mouse</li>
+</ul>
+The controller script manages animations of the player character based on values (x, z-axis movement, etc.) that are passed through to the animation controller. The mouse 
+script handles user mouse input and based on that information moves the player camera, the clamp restricts the player from looking too far up or down, vertically. The movement script 
+controls the players movement. For example, if the "W" key is pressed the player character will walk forward in-game based on the players camera perspective.
+<br></br>
+<img src="resources/img/controller.png" alt="ERROR NO IMG" height="500" width="200">
+<br></br>
+<img src="resources/img/mouse.png" alt="ERROR NO IMG" height="300" width="350">
+<br></br>
+<img src="resources/img/movement.png" alt="ERROR NO IMG" height="300" width="550">
 </p>
 <b>Animation</b>
 <p> 

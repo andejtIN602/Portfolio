@@ -21,12 +21,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <!--<img src="/w3images/avatar_smoke.jpg" style="width:100%"> -->
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>TECHNICAL</p>
@@ -36,60 +34,67 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>PROFESSIONAL</p>
   </a>
 </nav>
-
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">TECHNICAL</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">PROFESIONAL</a>
-  </div>
+<div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+<a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+<a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">TECHNICAL</a>
+<a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">PROFESIONAL</a>
 </div>
-
+</div>
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">Jamie Anderson</h1>
-    <p>This portfolio contains all my personal documentation from the development of Skin, the intent of this document is to convey that I understand 
-	crucial aspects of software development.
-			</p>
-  </header> 
-  <!-- Technical Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="photos">
-    <h2 class="w3-text-light-grey">TECHNICAL</h2>
-    <hr style="width:200px" class="w3-opacity">
-<b><u>SKIN</u></b>	
-<br></br>
-<b>Water Shader Graph</b>
+<!-- Header/Home -->
+<header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+<h1 class="w3-jumbo"><span class="w3-hide-small">Jamie Anderson</h1>
 <p>
-The first addition I added to Skin was a Water Shader Graph. This allows for the implementation of water within the Unity engine. 
-<br></br>
-<a href="https://www.youtube.com/watch?v=uuzB93F39P8">Water Shader Graph Tutorial</a>
-<br></br>
-Using the referenced video above, I created a water shader graph for Skin which requires: 
-<ol>
-<li>Lightweight Render Pipeline</li>
-<li>Waterbump Texture Map</li>
-<li>Shader Graph</li>
-<li>Water Shader Graph Texture (applied to plane)</li>
-</ol>
-<br></br>
-NOTE: Simplest way to acquire a Waterbump Texture Map is by acquiring one off the internet, a simple google search will bring up multiple choices. 
-<br></br>
-Once all components are created place a plane asset into the enviroment and apply the shader graph to it, Once applied the configuration 
-options will become available to adjust the water textures behaviours like colors and the speed at which the texture pans across the plane, this emulates the 
-behaviour of a current or flowing water.
-<br></br>
-<img src="resources/img/watermap3.png" alt="ERROR NO IMG" height="300" width="550">
-<br></br>
-<img src="resources/img/watermap2.png" alt="ERROR NO IMG" height="300" width="550">
-<br></br>
-<img src="resources/img/live.png" alt="ERROR NO IMG" height="300" width="550">
-<br></br>
-Issues: Due to Skin using the HDRP (High Definition Render Pipeline) there is a rendering issue with the water as it is effected by some form of culling based on player location.
-This does not occur when the LWRP (Light Weight Render Pipeline) however as concluded by my own testing and consultation by previous Skin developer, Jordan Dargaville.
-<br></br>
+  This portfolio contains all my personal documentation from the development of Skin, the intent of this document is to convey that I understand 
+	crucial aspects of software development.
+</p>
+</header> 
+<!-- Technical Section -->
+<div class="w3-padding-64 w3-content w3-text-grey" id="photos">
+<h2 class="w3-text-light-grey">TECHNICAL</h2>
+<hr style="width:200px" class="w3-opacity">
+<h2><b><u>SKIN</u></b></h2>	
+  <br></br>
+  <b>Water Shader Graph</b>
+<p>
+  The first addition I added to Skin was a Water Shader Graph. This allows for the implementation of water within the Unity engine. 
+    <br></br>
+  <a href="https://www.youtube.com/watch?v=uuzB93F39P8">Water Shader Graph Tutorial</a>
+    <br></br>
+  Using the referenced video above, I created a water shader graph for Skin which requires: 
+  <ol>
+    <li>Lightweight Render Pipeline</li>
+    <li>Waterbump Texture Map</li>
+    <li>Shader Graph</li>
+    <li>Water Shader Graph Texture (applied to plane)</li>
+  </ol>
+    <br></br>
+  NOTE: Simplest way to acquire a Waterbump Texture Map is by acquiring one off the internet, a simple google search will bring up multiple choices. 
+    <br></br>
+  The most crucial part, the shader graph is complex and simple at the same time. Following the steps provided in the Tutorial
+  I referred to above, it is simple to replicate however if I were to explain step-by-step we would be here all day. In a nutshell each component allows 
+  for additional properties to be added to the actual shader graph that will render in the game including animation for the current flow of the water.
+  <br></br>
+  Once all components are created place a plane asset into the enviroment and apply the shader graph to it, Once applied the configuration 
+  options will become available to adjust the water textures behaviours like colors and the speed at which the texture pans across the plane, this emulates the 
+  behaviour of a current or flowing water.
+    <br></br>
+  Issues: Due to Skin using HDRP (High Definition Render Pipeline) there is a rendering issue with the water as it is effected by some form of culling based on player location.
+  This does not occur when using LWRP (Light Weight Render Pipeline) however as concluded by my own testing and consultation by previous Skin developer, Jordan Dargaville.
+    <br></br>
+  <img src="resources/img/watermap3.png" class="w3-round" alt="ERROR NO IMG" height="300" width="550">
+    <br></br>
+  <img src="resources/img/watermap2.png" class="w3-round" alt="ERROR NO IMG" height="300" width="550">
+    <br></br>
+  <img src="resources/img/live.png" class="w3-round" alt="ERROR NO IMG" height="300" width="550">
+    <br></br>
+  <video width="720" height="480" controls>
+    <source src="resources/img/water.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
 </p>
 <b>AI Path Following</b>
 <p>
@@ -105,117 +110,128 @@ to create a fixed repeating flight path for the bird to follow, this will allow 
 <br></br>
 <video width="720" height="480" controls>
   <source src="resources/img/bird.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+  Your browser does not support the video tag.
+  </video>
 </p>
 <b>Render Layers Unity</b>
 <p>
-Skin uses a different set of character models and animations based on the perspective of the player. For example, 
-while the player perspective shows the characters arms and what the player has equipped, they cannot see the physcial character model that effects the players hitbox, collision
-and so on. 
-<br></br>
-The problem with this, is that without the use of correct layering for entities in the running enviroment will cause shadows and entities and animations to be viewable to other players
-or cameras within the enviroment. To correct this, I used the Layer tool and created a new layer to associate player viewable only assets. 
+  Skin uses a different set of character models and animations based on the perspective of the player. For example, 
+  while the player perspective shows the characters arms and what the player has equipped, they cannot see the physcial character model that effects the players hitbox, collision
+  and so on. 
+    <br></br>
+  The problem with this, is that without the use of correct layering for entities in the running enviroment will cause shadows and entities and animations to be viewable to other players
+  or cameras within the enviroment. To correct this, I used the Layer tool and created a new layer to associate player viewable only assets, I have listed the process below.
+    <br></br>
+<ol>
+  <li>Create a new layer, click layer "add new layer" / "edit layers"</li>
+  <li>Select FPS arms and put them into the layer created "Player View"</li>
+  <li>Remove the "Player View" layer from the cull list for every camera aside from the player camera</li>
+</ol>
+  <img src="resources/img/layer.png" class="w3-round" alt="ERROR NO IMG" height="400" width="150">
+    <br></br>
+  <img src="resources/img/cull.png" class="w3-round" alt="ERROR NO IMG" height="200" width="300">
 </p>
-<h2><u><b>PROJECT DARK</b></u></h2>
 <br></br>
+<h2><u><b>PROJECT DARK</b></u></h2>
 <p>
-Project Dark is my personal project that I am developing within Unity as a side project to learn more in-depth game developement skills. Over the semester alongside Skin I have 
-slowly been adding features and mechanics to my game for testing.  
+  Project Dark is my personal project that I am developing within Unity as a side project to learn more in-depth game developement skills. Over the semester alongside Skin I have 
+  slowly been adding features and mechanics to my game for testing.  
 </p>
 <b>Controller</b>
 <p>
-The core focus of my game is the camera perspective I use, this has changed multiple times as I have experimented with fixed camera angles and first-person. Ultimately I decided
-on a first-person perspective due to the effects I can add to the scene (Camera sway, fixed perspectives, etc.). 
+  The core focus of my game is the camera perspective I use, this has changed multiple times as I have experimented with fixed camera angles and first-person. Ultimately I decided
+  on a first-person perspective due to the effects I can add to the scene (Camera sway, fixed perspectives, etc.). 
+    <br></br>
+  Currently I have three scripts that effect the player controls and mechanics.  
+<ul>
+  <li>Player Controller</li>
+  <li>Movement</li>
+  <li>Mouse</li>
+</ul>
+  The controller script manages animations of the player character based on values (x, z-axis movement, etc.) that are passed through to the animation controller. The mouse 
+  script handles user mouse input and based on that information moves the player camera, the clamp restricts the player from looking too far up or down, vertically. The movement script 
+  controls the players movement. For example, if the "W" key is pressed the player character will walk forward in-game based on the players camera perspective.
+    <br></br>
+  <img src="resources/img/controller.png" class="w3-round" alt="ERROR NO IMG" height="500" width="200">
+    <br></br>
+  <img src="resources/img/mouse.png" class="w3-round" alt="ERROR NO IMG" height="300" width="350">
+    <br></br>
+  <img src="resources/img/movement.png" class="w3-round" alt="ERROR NO IMG" height="300" width="550">
 </p>
 <b>Animation</b>
 <p> 
-Adding animations is simplistic with the animator inspector as it enables states and transitions to be mapped for specific animations to play when prompted.
-For example, with my character there is a value recorded for the x and z-axis movement, isDead and isWalking checks.
-<br></br>
-<img src="resources/img/fps3.png" alt="ERROR NO IMG" height="300" width="500">
-<br></br>
-If the player is walking the isWalking statement is set to true,
-this triggers a transitition to play the walking animation. Based on the value of the x and z-axis the direction of the animation will determined and result in directional animation.
-<br></br>
-<img src="resources/img/fps.png" alt="ERROR NO IMG" height="300" width="250">
-<img src="resources/img/fps2.png" alt="ERROR NO IMG" height="300" width="250">
-<br></br>
-
-<br></br>
-<a href="https://www.mixamo.com/">Animation Source</a>
-<br></br>
-
-
+  <a href="https://www.mixamo.com/">Animation Source</a>
+    <br></br>
+  Adding animations is simplistic with the animator inspector as it enables states and transitions to be mapped for specific animations to play when prompted.
+  For example, with my character there is a value recorded for the x and z-axis movement, isDead and isWalking checks.
+    <br></br>
+  If the player is walking the isWalking statement is set to true,
+  this triggers a transitition to play the walking animation. Based on the value of the x and z-axis the direction of the animation will determined and result in directional animation.
+    <br></br>
+  <img src="resources/img/fps3.png" class="w3-round" alt="ERROR NO IMG" height="300" width="500">
+    <br></br>
+  <img src="resources/img/fps.png" class="w3-round" alt="ERROR NO IMG" height="300" width="250">
+  <img src="resources/img/fps2.png" class="w3-round" alt="ERROR NO IMG" height="300" width="250">
+    <br></br>
+  <video width="720" height="480" controls>
+  <source src="resources/img/anim.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
 </p>
 <b>Pro Builder / Pro Grid</b>
 <p>
-Pro Builder and Grid are Unity Tool's that completely overhauls Unitys scene envioment with features that allow for much easier placement of objects with snapping and 
-adjustment. These tools are technically two seperate entities but when both installed work together as Pro Grid adds a grid placement for everything within the scene with adjustable
-snapping, while Pro Builder allows for the addition and manipulation of new or existing objects in the scene.
-<br></br>
-<img src="resources/img/builder.png" alt="ERROR NO IMG" height="400" width="700">
-<br></br>
-To use Pro Grid within the scene enviroment you will notice additional elements to the scene interface to the left. You can set the snapping increment and 
-the rendered grid (x, y or z-axis).
-<br></br>
-Once setup is complete and Pro Grid and Pro Builder are both installed, You can use the Pro Builder menu to create new shapes and related aspects such as the material and UV settings.
-These tools make for fast construction of scenes for testing and implementation. 
-<br></br>
-<img src="resources/img/builder2.png" alt="ERROR NO IMG" height="300" width="250">
-<br></br>
-Adding new shapes is done by selecting new shape or opening the shape tool menu and then selecting a shape style and the dimensions, once finalised click the "Build" button and the 
-shape will be added to the envioment and added to the scene heirachy. 
+  Pro Builder and Grid are Unity Tool's that completely overhauls Unitys scene envioment with features that allow for much easier placement of objects with snapping and 
+  adjustment. These tools are technically two seperate entities but when both installed work together as Pro Grid adds a grid placement for everything within the scene with adjustable
+  snapping, while Pro Builder allows for the addition and manipulation of new or existing objects in the scene.
+    <br></br>
+  <img src="resources/img/builder.png" class="w3-round" alt="ERROR NO IMG" height="400" width="600">
+    <br></br>
+  To use Pro Grid within the scene enviroment you will notice additional elements to the scene interface to the left. You can set the snapping increment and 
+  the rendered grid (x, y or z-axis).
+    <br></br>
+  Once setup is complete and Pro Grid and Pro Builder are both installed, You can use the Pro Builder menu to create new shapes and related aspects such as the material and UV settings.
+  These tools make for fast construction of scenes for testing and implementation. 
+    <br></br>
+  <img src="resources/img/builder2.png" class="w3-round" alt="ERROR NO IMG" height="300" width="250">
+    <br></br>
+  Adding new shapes is done by selecting new shape or opening the shape tool menu and then selecting a shape style and the dimensions, once finalised click the "Build" button and the 
+  shape will be added to the envioment and added to the scene heirachy. 
 </p>
-<!-- Reflection -->	
-<br></br>
-<u><b>Reflection</b></u>
-<br></br>	
-
-<p>
-</p>
-
-
   <!-- End Technical Section -->
   </div>
-
-    <!-- Contact Section -->
+  <!-- Professional -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">PROFESSIONAL</h2>
-    <hr style="width:200px" class="w3-opacity">
-	<p>
+  <h2 class="w3-text-light-grey">PROFESSIONAL</h2>
+  <hr style="width:200px" class="w3-opacity">
+<p>
 	<u><b>Communication</b></u>
-	<br></br>
+	  <br></br>
 	Initially we had scrums in which we would meet and have a progress update with the team and plan further additions. Due to COVID-19, we could not meet for scrums or 
 	intertaction in general. 
-	<br></br>
+	  <br></br>
 	After entering lock down, MS Teams was used as the main form of communication. This worked as I tended to work on addtions and features indepedently from the team
 	as I was the only project 2 student for game development, thus more was expected of me due to my previous experience and learning from the previous semester I spent 
 	in game development.
-	<br></br>
+	  <br></br>
 	My main line of communication was with Adon as I would mainly consult Adon for approval of what next for me to research and implement into Skin or to update on current
 	developments.
-	<br></br>
-	<img src="resources/img/team2.png" alt="ERROR NO IMG" height="450" width="350">
-	
+	  <br></br>
+	<img src="resources/img/team2.png" class="w3-round" alt="ERROR NO IMG" height="450" width="350">
 </p>
-<b>Reflection</b>
-	<br></br>
-	Due to the lockdown, we weren't able to communcicate by holding meetings or debriefs. Teams was the only form of 
-
+<b>Reflection</b>	
 <p>
+  Due to the lockdown, we weren't able to communcicate by holding meetings or debriefs. Teams was the only form of communcation we had available. Though Teams proves to provide 
+  an easy enviroment to communicate and keep development moving.
+    <br></br>
+<img src="resources/img/teams.png" class="w3-round" alt="ERROR NO IMG" height="167" width="700">
 </p>
-  <!-- End Contact Section -->
+  <!-- End Professional Section -->
   </div>
-  
-    <!-- Footer -->
+  <!-- Footer -->
   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-   
   <!-- End footer -->
   </footer>
-
-<!-- END PAGE CONTENT -->
+  <!-- END PAGE CONTENT -->
 </div>
-
 </body>
 </html>
